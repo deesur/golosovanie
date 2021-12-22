@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+</head>
+
+<body>
+    <h1></h1>
+    <input id="address" name="address" value="" readonly />
+    <input id="number" name="number" value="" />
+    <button id="btn_req">Request</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script>
+    window.addEventListener("load", function (event) {
+        var el = document.querySelector('h1');
+        if (!window.ethereum) {
+            el.innerHTML = "cant connect metamask";
+            return;
+        }
+        getAccount();
+    });
+    async function getAccount() {
+        await window.ethereum.send('eth_requestAccounts');
+        const web3 = new Web3(window.ethereum);
+        document.querySelector('#address').value = ethereum.selectedAddress;
+
+    }
+    document.getElementById('btn_req').onclick = () => {
+        const web3 = new Web3(window.ethereum);
+        const inputNumber = document.querySelector('#number').value;
+        const contract_address = '0x7C8C714Cfd52DED33D3496277Ebdf100068ca01e'
+        web3.eth.defaultAccount = ethereum.selectedAddress;
+        var myContract = new web3.eth.Contract([
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "serialNumber",
+                        "type": "string"
+                    }
+                ],
+                "name": "InquireDiplomaByNumber",
+                "outputs": [],
+                "stateMutability": "payable",
+                "type": "function"
+            }],
+            contract_address);
+        tr = myContract.methods.InquireDiplomaByNumber(inputNumber).send({
+            from: ethereum.selectedAddress,
+            gas: 3000000,
+            value: 2000000000000000
+        });
+        console.log(inputNumber);
+    };
+</script>
+
+</html>
