@@ -2,13 +2,6 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #6096ff;
 }
-header {
-  display: flex;
-  padding: 0px 20px;
-  background-color: #778399;
-  font-weight: 500;
-  font-size: 26px;
-}
 .logo {
   display: flex;
   align-items: center;
@@ -39,7 +32,6 @@ header {
   justify-content: space-around;
   margin: 50px 50px;
 }
-
 .actions a {
   font-weight: 500;
   padding: 20px;

@@ -42,10 +42,9 @@
     <section class="mb-5">
         <div class="container">
             <div class="d-grid gap-2 col-6 mx-auto">
-                <a class="btn btn-dark btn-lg" href="{{url_for('add_vote')}}">Добавить голосование</a>
-                <a class="btn btn-dark btn-lg" href="{{url_for('add_member')}}">Добавить члена комиссии</a>
-                <a class="btn btn-dark btn-lg" href="{{url_for('get_izbir', vote=vote)}}">Список избирателей</a>
-                <a class="btn btn-dark btn-lg" href="{{url_for('golosovanie', vote=vote)}}">Результаты</a>
+                <a class="btn btn-dark btn-lg" href="{{url_for('add_candidate', vote=vote)}}">Добавить кандидата</a>
+                <a class="btn btn-dark btn-lg" href="{{url_for('get_izbir', vote=vote)}}">Добавить избирателей</a>
+                <a class="btn btn-dark btn-lg" href="{{url_for('results', vote=vote)}}">Результаты</a>
             </div>
         </div>
     </section>

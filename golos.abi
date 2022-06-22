@@ -1,0 +1,243 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			}
+		],
+		"name": "addCandidate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_addr",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			}
+		],
+		"name": "addIzbir",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_addr",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			}
+		],
+		"name": "addMember",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_date",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			}
+		],
+		"name": "addVote",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "_addr",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "choice",
+				"type": "uint256"
+			}
+		],
+		"name": "golosovanie",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "administrate",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_addr",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			}
+		],
+		"name": "checkIzb",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_addr",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			}
+		],
+		"name": "checkMem",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getCandidates",
+		"outputs": [
+			{
+				"internalType": "string[]",
+				"name": "names",
+				"type": "string[]"
+			},
+			{
+				"internalType": "uint256[]",
+				"name": "ind",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getResults",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "fName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "score",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Vibor.Candidate[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getVotings",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
