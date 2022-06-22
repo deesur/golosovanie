@@ -1,0 +1,7 @@
+
+stop
+loadScript("F:/ETHER/data/register.js")
+geth account new
+loadScript("F:/ETHER/data/register.js")
+administrate
+eth.coinbase

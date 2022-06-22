@@ -1,0 +1,1 @@
+geth --datadir F:\ETHER\data\account --ipcpath "F:\ETHER\data\account\geth.ipc" --nodiscover --mine --miner.threads 1 --maxpeers 0 --verbosity 3 --networkid 98760 --http --http.port 8545 --http.corsdomain https://remix.ethereum.org --http.api personal,web3,eth,net --allow-insecure-unlock console
